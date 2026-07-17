@@ -51,12 +51,29 @@ function handleYes() {
   const stage = document.getElementById("stage");
   document.getElementById("message").textContent = "";
   stage.innerHTML = "";
+  stage.style.display = "flex";
+  stage.style.flexDirection = "column";
+  stage.style.alignItems = "center";
+  stage.style.justifyContent = "center";
+  stage.style.gap = "16px";
 
   const yay = document.createElement("h2");
   yay.className = "success";
   yay.style.color = config.theme.accentColor;
   yay.textContent = config.yesMessage;
   stage.appendChild(yay);
+
+  const fbLink = document.createElement("a");
+  fbLink.href = config.facebookUrl;
+  fbLink.target = "_blank";
+  fbLink.rel = "noopener noreferrer";
+  fbLink.className = "btn choice-btn girls-btn success";
+  fbLink.style.position = "static";
+  fbLink.style.transform = "none";
+  fbLink.style.marginTop = "20px";
+  fbLink.style.display = "inline-flex";
+  fbLink.textContent = config.facebookText;
+  stage.appendChild(fbLink);
 
   setInterval(spawnHeart, 250);
 }

@@ -1,0 +1,24 @@
+{
+  "question": "Will you be my girlfriend?",
+  "yesText": "Yes",
+  "noText": "No",
+  "yesMessage": "Yay! ❤️",
+  "dodgeMessages": [
+    "Nice try",
+    "Nope",
+    "Keep trying",
+    "Not happening",
+    "Try again",
+    "So close",
+    "Almost",
+    "No way",
+    "Catch me if you can",
+    "Not today"
+  ],
+  "theme": {
+    "backgroundColor": "#fbeaf0",
+    "accentColor": "#d4537e",
+    "yesColor": "#639922",
+    "noColor": "#ffffff"
+  }
+}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Pick one</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div id="hearts"></div>
+
+  <main class="card">
+    <h1 id="question">Are you a boy or a girl?</h1>
+
+    <div class="choice-stage">
+      <a href="boys.html" class="btn choice-btn boys-btn">Boys</a>
+      <a href="girls.html" class="btn choice-btn girls-btn">Girls</a>
+    </div>
+  </main>
+
+  <script>
+    function spawnHeart() {
+      const heart = document.createElement("div");
+      heart.className = "heart";
+      heart.textContent = "❤";
+      heart.style.left = Math.random() * 100 + "vw";
+      heart.style.animationDuration = 4 + Math.random() * 3 + "s";
+      heart.style.fontSize = 14 + Math.random() * 16 + "px";
+      document.getElementById("hearts").appendChild(heart);
+      setTimeout(() => heart.remove(), 8000);
+    }
+    setInterval(spawnHeart, 600);
+  </script>
+</body>
+</html>
